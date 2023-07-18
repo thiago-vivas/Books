@@ -48,3 +48,10 @@
 /C# 12/Chapter 11/WebAPPSignalR/obj/Debug/net7.0
 /C# 12/Chapter 11/WebAPPSignalR/obj/Release/net7.0
 /C# 12/Chapter 11/WebAPPSignalR/obj
+/C# 12/Chapter 5/AzureDatabases/.vs
+/C# 12/Chapter 5/AzureDatabases/BlobStorageWebApp/bin/Debug/net7.0
+/C# 12/Chapter 5/AzureDatabases/BlobStorageWebApp/obj
+/C# 12/Chapter 5/AzureDatabases/CosmosDBWebApp/bin/Debug/net7.0
+/C# 12/Chapter 5/AzureDatabases/CosmosDBWebApp/obj
+/C# 12/Chapter 5/AzureDatabases/SqlServerWebApp/bin/Debug/net7.0
+/C# 12/Chapter 5/AzureDatabases/SqlServerWebApp/obj
