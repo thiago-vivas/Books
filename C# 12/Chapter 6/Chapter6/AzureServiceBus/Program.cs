@@ -13,16 +13,12 @@ string topicName = "sampletopic";
 
 // name of your Service Bus queue
 // the client that owns the connection and can be used to create senders and receivers
-ServiceBusClient client;
 // the sender used to publish messages to the queue
-ServiceBusSender sessionQueueSender;
-ServiceBusSender topicQueueSender;
-ServiceBusSender normalQueueSender;
 
-client = new ServiceBusClient(connectionString);
-normalQueueSender = client.CreateSender(queueName);
-sessionQueueSender = client.CreateSender(sessionQueueName);
-topicQueueSender = client.CreateSender(topicName);
+await using var client =new ServiceBusClient(connectionString);
+await using var normalQueueSender = client.CreateSender(queueName);
+await using var sessionQueueSender = client.CreateSender(sessionQueueName);
+await using var topicQueueSender = client.CreateSender(topicName);
 
 await normalQueueSender.SendMessageAsync(new ServiceBusMessage("1 message at: " + DateTime.Now));
 await normalQueueSender.SendMessageAsync(new ServiceBusMessage("2 message at: " + DateTime.Now));
@@ -52,12 +48,5 @@ await sessionQueueSender.SendMessageAsync(new ServiceBusMessage("3 session messa
 await sessionQueueSender.SendMessageAsync(new ServiceBusMessage("1 session message at: " + DateTime.Now) { SessionId = "sampleSessionId2" });
 await sessionQueueSender.SendMessageAsync(new ServiceBusMessage("2 session message at: " + DateTime.Now) { SessionId = "sampleSessionId2" });
 await sessionQueueSender.SendMessageAsync(new ServiceBusMessage("3 session message at: " + DateTime.Now) { SessionId = "sampleSessionId2" });
-
-
-await client.DisposeAsync();
-await sessionQueueSender.DisposeAsync();
-await normalQueueSender.DisposeAsync();
-await topicQueueSender.DisposeAsync();
-
 
 Console.WriteLine("Messages Published!");

@@ -5,7 +5,7 @@ Console.WriteLine("Hello, World!");
 string connectionString = "Endpoint=sb://thiagosample.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=e6Bb5GnhuadJfa1W49kCxwfBztioIAHXU+ASbH7kjrc=";
 string queueName = "samplequeue";
 
-ServiceBusClient client = new ServiceBusClient(connectionString);
+await using ServiceBusClient client = new ServiceBusClient(connectionString);
 
 // create the options to use for configuring the processor
 var options = new ServiceBusProcessorOptions
@@ -52,6 +52,3 @@ await processor.StartProcessingAsync();
 
 // since the processing happens in the background, we add a Console.ReadKey to allow the processing to continue until a key is pressed.
 Console.ReadKey();
-
-await client.DisposeAsync();
-await processor.DisposeAsync();
