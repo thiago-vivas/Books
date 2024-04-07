@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSumCalculator", "SampleSumCalculator.csproj", "{CF8FD9F7-4D5E-44E6-9B59-9F70CAFDAA64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleSumCalculator", "SampleSumCalculator.csproj", "{CF8FD9F7-4D5E-44E6-9B59-9F70CAFDAA64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSumCalculator.Tests", "..\SampleSumCalculator.Tests\SampleSumCalculator.Tests.csproj", "{7DB756F5-24C6-46F8-BDB9-F0DA9C8297AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleSumCalculator.Tests", "..\SampleSumCalculator.Tests\SampleSumCalculator.Tests.csproj", "{7DB756F5-24C6-46F8-BDB9-F0DA9C8297AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSumCalculatorXUnit", "..\SampleSumCalculatorXUnit\SampleSumCalculatorXUnit.csproj", "{DC7A9BBA-9DE1-49C9-B586-7176AAFF56FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7DB756F5-24C6-46F8-BDB9-F0DA9C8297AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB756F5-24C6-46F8-BDB9-F0DA9C8297AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB756F5-24C6-46F8-BDB9-F0DA9C8297AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7A9BBA-9DE1-49C9-B586-7176AAFF56FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7A9BBA-9DE1-49C9-B586-7176AAFF56FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7A9BBA-9DE1-49C9-B586-7176AAFF56FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7A9BBA-9DE1-49C9-B586-7176AAFF56FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

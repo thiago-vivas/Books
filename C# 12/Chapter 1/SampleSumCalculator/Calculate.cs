@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleSumCalculator
 {
-    public class Calculate
+    public class Calculate : ICalculate
     {
         private int NumberA { get; set; }
         private int NumberB { get; set; }
@@ -18,6 +18,6 @@ namespace SampleSumCalculator
 
         }
 
-        public int Sum() { return NumberA + NumberB ; }
+        public int Sum() { return NumberA + NumberB; }
     }
 }

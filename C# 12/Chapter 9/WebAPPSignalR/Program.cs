@@ -6,7 +6,7 @@ using WebAPPSignalR.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<WebAPPSignalRContext>(options =>
-        options.UseSqlServer("Data Source=DESKTOP-H20O12E;Initial Catalog=SampleSignalRIdentityDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
+        options.UseSqlServer("Data Source=LAPTOP-OUPPC5AR;Initial Catalog=SampleSignalRIdentityDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<WebAPPSignalRContext>();
 
@@ -20,7 +20,7 @@ builder.Services.AddAuthorization(options =>
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSignalR();
+builder.Services.AddSignalR();       
 
 var app = builder.Build();
 
